@@ -1,0 +1,88 @@
+import matplotlib.pyplot as plt
+
+N = [10, 100, 500, 1000, 10000]
+
+bubble_sort_acak = [18, 241, 6291, 32541, 945428]
+bubble_sort_terurut_terbalik = [1, 74, 1976, 8066, 1.00446e+06]
+bubble_sort_sudah_terurut = [0, 55, 666, 4456, 290847]
+
+insertion_sort_acak = [1, 24, 492, 1662, 266049]
+insertion_sort_terurut_terbalik = [1, 38, 812, 3188, 336797]
+insertion_sort_sudah_terurut = [1, 1, 5, 8, 115]
+
+selection_sort_acak = [2, 43, 836, 2987, 296951]
+selection_sort_terurut_terbalik = [2, 36, 901, 2775, 275535]
+selection_sort_sudah_terurut = [1, 36, 758, 2644, 282916]
+
+merge_sort_acak = [16, 127, 314, 824, 8069]
+merge_sort_terurut_terbalik = [15, 89, 313, 775, 6561]
+merge_sort_sudah_terurut = [6, 74, 350, 507, 7388]
+
+quick_sort_acak = [2, 31, 109, 223, 3915]
+quick_sort_terurut_terbalik = [2, 45, 415, 1388, 11883]
+quick_sort_sudah_terurut = [1, 70, 402, 922, 9882]
+
+plt.figure(figsize=(14, 10))
+
+# Bubble Sort
+plt.subplot(2, 3, 1)
+plt.plot(N, bubble_sort_acak, label='Acak')
+plt.plot(N, bubble_sort_terurut_terbalik, label='Terurut Terbalik')
+plt.plot(N, bubble_sort_sudah_terurut, label='Sudah Terurut')
+plt.title('Bubble Sort')
+plt.xlabel('Ukuran Data (N)')
+plt.ylabel('Waktu Eksekusi (μs)')
+plt.xscale('log')
+plt.yscale('log')
+plt.legend()
+
+# Insertion Sort
+plt.subplot(2, 3, 2)
+plt.plot(N, insertion_sort_acak, label='Acak')
+plt.plot(N, insertion_sort_terurut_terbalik, label='Terurut Terbalik')
+plt.plot(N, insertion_sort_sudah_terurut, label='Sudah Terurut')
+plt.title('Insertion Sort')
+plt.xlabel('Ukuran Data (N)')
+plt.ylabel('Waktu Eksekusi (μs)')
+plt.xscale('log')
+plt.yscale('log')
+plt.legend()
+
+# Selection Sort
+plt.subplot(2, 3, 3)
+plt.plot(N, selection_sort_acak, label='Acak')
+plt.plot(N, selection_sort_terurut_terbalik, label='Terurut Terbalik')
+plt.plot(N, selection_sort_sudah_terurut, label='Sudah Terurut')
+plt.title('Selection Sort')
+plt.xlabel('Ukuran Data (N)')
+plt.ylabel('Waktu Eksekusi (μs)')
+plt.xscale('log')
+plt.yscale('log')
+plt.legend()
+
+# Merge Sort
+plt.subplot(2, 3, 4)
+plt.plot(N, merge_sort_acak, label='Acak')
+plt.plot(N, merge_sort_terurut_terbalik, label='Terurut Terbalik')
+plt.plot(N, merge_sort_sudah_terurut, label='Sudah Terurut')
+plt.title('Merge Sort')
+plt.xlabel('Ukuran Data (N)')
+plt.ylabel('Waktu Eksekusi (μs)')
+plt.xscale('log')
+plt.yscale('log')
+plt.legend()
+
+# Quick Sort
+plt.subplot(2, 3, 5)
+plt.plot(N, quick_sort_acak, label='Acak')
+plt.plot(N, quick_sort_terurut_terbalik, label='Terurut Terbalik')
+plt.plot(N, quick_sort_sudah_terurut, label='Sudah Terurut')
+plt.title('Quick Sort')
+plt.xlabel('Ukuran Data (N)')
+plt.ylabel('Waktu Eksekusi(μs)')
+plt.xscale('log')
+plt.yscale('log')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
